@@ -1,0 +1,265 @@
+body {
+    background-color: rgb(63, 56, 56);
+    margin: 0;
+    font-family: Arial;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    background: #1c6bff;
+    background: linear-gradient(90deg, rgba(28, 107, 255, 1) 0%, rgba(170, 0, 0, 1) 50%);
+    padding: 20px;
+    text-align: left;
+}
+
+.flex1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.text {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(175, 174, 174);
+    width: 100%;
+    padding: 16px 20px;
+    background: linear-gradient(90deg, #0857d729, #0f25b12f, #061d8e25);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 14px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#groot {
+    font-size: 300%;
+}
+
+footer {
+    padding: 20px;
+    background-color: rgb(94, 94, 94);
+    color: white;
+}
+
+.content {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: start;
+    gap: 32px;
+    padding: 50px;
+}
+
+
+
+
+button {
+    background: none;
+    border: none;
+    font-size: 16px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.link {
+    color: rgb(251, 251, 251);
+    text-decoration: none;
+    background-color: rgb(28, 107, 255);
+    border-radius: 5px;
+    padding: 5px 15px;
+    ;
+}
+
+a:hover {
+    color: rgb(110, 110, 110);
+
+}
+
+.project {
+    width: 100%;
+    height: 20%;
+    padding: 16px 20px;
+    background: linear-gradient(90deg, #0857d729, #0f25b12f, #061d8e25);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 14px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+}
+
+#textcolor {
+    color: rgb(197, 197, 197);
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: t;
+    gap: 20px;
+    width: 100%;
+}
+
+.link2 {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.profiel {
+    width: 240px;
+    height: 240px;
+
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 1s ease;
+}
+
+
+#transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    overflow: hidden;
+}
+
+#transition.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+#transition img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    transform: scale(1);
+    transition: transform 1s ease;
+}
+
+#transition.zoom img {
+    transform: scale(8);
+}
+
+#hollowPurple {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#transition img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 1s ease;
+}
+
+#transition.active img {
+    transform: scale(8);
+}
+
+#hollowPurple {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#main-text {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(175, 174, 174);
+}
+
+@media (max-width: 600px) {
+    .box {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .navbar {
+        display: flex;
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+
+    .link {
+        display: inline-block;
+        width: auto;
+        padding: 5px;
+        font-size: 12px;
+        white-space: nowrap;
+        position: relative;
+        z-index: 10;
+    }
+
+
+
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 24px;
+        padding: 20px 16px;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .project {
+        height: auto;
+    }
+
+    .content img.profiel {
+        display: block;
+        width: min(100%, 240px);
+        max-width: 240px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        margin: 12px auto 0;
+    }
+}

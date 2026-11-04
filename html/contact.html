@@ -1,0 +1,52 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lars</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <header class="box">
+        <strong>Lars</strong>
+        <nav class="navbar">
+            <a href="../index.html" class="link"><strong>Home</strong></a>
+            <a href="projecten.html" class="link"><strong>Projecten</strong></a>
+            <a href="vaardigheden.html" class="link"><strong>Vaardigheden</strong></a>
+            <a href="contact.html" class="link"><strong>Contact</strong></a>
+        </nav>
+    </header>
+    <main class="contact-page">
+        <section class="contact-intro">
+            <p class="eyebrow">LATEN WE KENNISMAKEN</p>
+            <h1>Neem contact op</h1>
+            <p>Heb je een vraag over mijn projecten, vaardigheden of over dingen die ik aan het leren ben? Vul het formulier in. Ik vind het leuk om ideeën uit te wisselen en feedback te krijgen.</p>
+        </section>
+
+        <section class="contact-card" aria-label="Contactformulier">
+            <form class="input-box" id="contact-form">
+                <h2>Stuur een bericht</h2>
+                <p class="form-note">Dit is een demoformulier; er wordt geen echt bericht verzonden.</p>
+
+                <label for="name">Naam</label>
+                <input type="text" id="name" name="name" placeholder="Jouw naam" required>
+
+                <label for="email">E-mailadres</label>
+                <input type="email" id="email" name="email" placeholder="jij@voorbeeld.nl" required>
+
+                <label for="message">Bericht</label>
+                <textarea id="message" name="message" placeholder="Waar wil je het over hebben?" required></textarea>
+
+                <button type="submit">Verstuur bericht <span aria-hidden="true">→</span></button>
+                <p id="form-status" class="form-note" role="status" aria-live="polite"></p>
+            </form>
+
+            <aside class="contact-aside">
+                <img src="../foto/nanami (1).jpg" alt="Portret voor de contactpagina" class="profiel">
+                <p class="aside-label">ACHTER DE WEBSITE</p>
+                <h2>Lars</h2>
+                <p>Software Developer in opleiding</p>
+                <span class="status"><span aria-hidden="true"></span> Altijd bezig met iets nieuws</span>
+            </aside>
+        </section>
+    </main>
+    <script src="contact.js"></script>
+</body>
