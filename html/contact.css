@@ -30,6 +30,11 @@ body {
     gap: 8px;
 }
 
+.menu-toggle,
+.menu-button {
+    display: none;
+}
+
 .link {
     padding: 7px 14px;
     border-radius: 6px;
@@ -219,17 +224,52 @@ body {
 @media (max-width: 700px) {
     .box {
         flex-wrap: wrap;
+        position: relative;
+    }
+
+    .menu-toggle {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+
+    .menu-button {
+        display: block;
+        padding: 8px 12px;
+        border-radius: 6px;
+        background: #1c6bff;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .menu-toggle:focus-visible + .menu-button {
+        outline: 2px solid #fff;
+        outline-offset: 3px;
     }
 
     .navbar {
-        flex-wrap: wrap;
+        display: none;
+        flex: 0 0 100%;
+        flex-direction: column;
+        align-items: stretch;
         gap: 6px;
     }
 
+    .menu-toggle:checked + .menu-button + .navbar {
+        display: flex;
+    }
+
     .link {
-        padding: 6px 8px;
+        width: 100%;
+        padding: 8px;
         font-size: 12px;
-        white-space: nowrap;
+        text-align: center;
     }
 
     .contact-page {
